@@ -1,0 +1,12 @@
+
+/**
+* grid layout generator
+* @see: https://cssgrid-generator.netlify.com/
+*/
+@mixin grid($columns: 1fr 1fr, $rows: 1fr, $columnGap: 0px, $rowGap: 0px) {
+    display: grid;
+    grid-template-columns: $columns; 
+    grid-template-rows: $rows; 
+    grid-column-gap: $columnGap;
+    grid-row-gap: $rowGap; 
+}

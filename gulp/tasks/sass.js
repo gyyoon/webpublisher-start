@@ -4,7 +4,7 @@ import plumber from 'gulp-plumber';
 import sass from 'gulp-sass';
 import using from 'gulp-using';
 
-const sassTask = () => gulp.src('./src/css/**/*.scss', { base: './src/css' })
+const sassTask = () => gulp.src(['./src/css/**/*.scss', '!./src/css/**/_*.scss'], { base: './src/css' })
   .pipe(using())
   .pipe(plumber({ errorHandler: notify.onError('<%= error.message %>') }))
   .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))

@@ -49,7 +49,7 @@ const watch = () => {
 //   gulp.watch(['./src/**/*.js'], watchJs);
   gulp.watch(['./src/**/*.ejs'], watchEjs);
 
-  gulp.watch(['./src/assets/*.+'], watchAssets);
+  gulp.watch(['./src/assets/**/*'], watchAssets);
 };
 
 export default watch;

@@ -1,11 +1,14 @@
 @charset "utf-8";
 
+@import './variabels';
+@import './mixins';
+
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
-    background: gray;
+    background: $baseColor;
 }
 
 .footer {
@@ -14,4 +17,15 @@
     align-items: center;
     height: 100px;
     background: gray;
+}
+
+.grid {
+    @include grid(1fr 1fr, '', 25px, 30px);
+    > div {
+        outline: 1px solid $baseColor;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
